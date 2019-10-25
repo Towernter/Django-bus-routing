@@ -19,19 +19,21 @@ class SignUpForm(UserCreationForm):
 class BusForm(forms.ModelForm):
     bus_name = forms.CharField(max_length=50)
     capacity = forms.IntegerField()
+    is_available = forms.BooleanField()
 
     class Meta:
         model = Bus
-        fields = ('bus_name', 'capacity')
+        fields = ('bus_name', 'capacity', 'is_available')
 
 
 class DriverForm(forms.ModelForm):
     name = forms.CharField(max_length=50)
     driver_number = forms.CharField(max_length=50)
+    is_available = forms.BooleanField()
 
     class Meta:
         model = Driver
-        fields = ('name', 'driver_number')
+        fields = ('name', 'driver_number', 'is_available')
 
 
 class RouteForm(forms.ModelForm):
@@ -39,9 +41,9 @@ class RouteForm(forms.ModelForm):
 	distance = forms.DecimalField(max_digits=50,decimal_places=2)
 	estimated_people = forms.IntegerField()
 	route_name = forms.CharField(max_length=20)
-	time_line = forms.IntegerField()
+	time = forms.IntegerField()
     
     
 	class Meta:
 	    model = Route
-	    fields = ('destination', 'distance', 'estimated_people', 'route_name', 'time_line')
+	    fields = ('destination', 'distance', 'estimated_people', 'route_name', 'time')

@@ -5,7 +5,7 @@
  <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-xl-4 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -22,7 +22,7 @@
             </div>
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-xl-4 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -39,7 +39,7 @@
             </div>
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-xl-4 col-md-6 mb-4">
               <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -58,27 +58,98 @@
                 </div>
               </div>
             </div>
-
-            <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Something here</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-comments fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
 {% endblock%}
 
 {% block content %}
-your code here
+  <!-- Table of drivers -->
+    <div class="card shadow" >
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Available Drivers </h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTabl" width="100%"  cellspacing="0">
+                  {% for d in available_drivers %}
+                  <thead>
+                    <tr>
+                      <th>Driver Number</th>
+                      <th>Name</th>
+                      <th>Is Available</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{d.driver_number}}</td>
+                      <td>{{d.name}}</td>
+                      <td>{{d.is_available}}</td>
+                    </tr>
+                  </tbody>
+                  {% endfor%}
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <br>
+  <!-- Table of buses -->
+    <div class="card shadow" >
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Available Buses </h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTabl" width="100%"  cellspacing="0">
+                  {% for b in available_buses %}
+                  <thead>
+                    <tr>
+                      <th>Bus Name</th>
+                      <th>Capacity</th>
+                      <th>Is Available </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{b.bus_name}}</td>
+                      <td>{{b.capacity}}</td>
+                      <td>{{b.is_available}}</td>
+                    </tr>
+                  </tbody>
+                  {% endfor%}
+                </table>
+              </div>
+            </div>
+          </div>
+<br>
+   <!-- Table of Routes -->
+    <div class="card shadow" >
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Routes</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTabl" width="100%"  cellspacing="0">
+                  {% for r in routes %}
+                  <thead>
+                    <tr>
+                      <th>Route Destination</th>
+                      <th>Estimated People</th>
+                      <th>Estimated Time </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{r.destination}}</td>
+                      <td>{{r.estimated_people}}</td>
+                      <td>{{r.time}}</td>
+                    </tr>
+                  </tbody>
+                  {% endfor%}
+                </table>
+              </div>
+            </div>
+          </div>
+
+
 {% endblock %}
