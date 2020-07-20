@@ -14,4 +14,4 @@
 
 [Livie preview](https://bus-routing.herokuapp.com/)
 
-[Hosting Turorial](https://dev.to/towernter/hosting-a-python-django-web-application-on-heroku-2i48)
+[Hosting Tutorial](https://dev.to/towernter/hosting-a-python-django-web-application-on-heroku-2i48)
