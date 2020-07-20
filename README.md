@@ -13,5 +13,8 @@
 4. install fpdf
 
 [Livie preview](https://bus-routing.herokuapp.com/)
+```python
+(user_name = "johndoe" and password = "loremipsum")
+```
 
 [Hosting Tutorial](https://dev.to/towernter/hosting-a-python-django-web-application-on-heroku-2i48)
