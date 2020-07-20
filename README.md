@@ -12,7 +12,7 @@
 3. Install crispy forms
 4. install fpdf
 
-[Livie preview](https://bus-routing.herokuapp.com/)
+[Live preview](https://bus-routing.herokuapp.com/)
 ```python
 (user_name = "johndoe" and password = "loremipsum")
 ```
