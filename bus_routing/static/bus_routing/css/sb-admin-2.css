@@ -10584,7 +10584,6 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("{% static 'bus_routing/img/zupco.jpg' %}");
   background-position: center;
   background-size: cover;
 }
